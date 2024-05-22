@@ -15,7 +15,7 @@ pipeline{
         }
       } 
     }
-    stage('upload artifact'){
+       stage('upload artifact'){
         steps{
             sh 'curl -uadmin:AP8gcgmmset5jeYChTJYDN6XmDd -T \
             *.tgz\
