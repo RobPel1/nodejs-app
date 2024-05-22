@@ -15,4 +15,11 @@ pipeline{
         }
       } 
     }
+    stage('upload artifact'){
+        steps{
+            sh 'curl -uadmin:AP8gcgmmset5jeYChTJYDN6XmDd -T \
+            *.tgz\
+             "http://34.229.137.19:8081/artifactory/utc-nodejs/utc-app-${BUILD_ID}.tgz"'
+        }
+    }
 }
